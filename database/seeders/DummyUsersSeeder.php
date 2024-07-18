@@ -17,18 +17,21 @@ class DummyUsersSeeder extends Seeder
             [
                 'name' => 'admin',
                 'email' => 'admin@mail.com',
+                'username' => 'admin',
                 'role' => 'admin',
                 'password' => bcrypt('adm123')
             ],
             [
                 'name' => 'petugas',
                 'email' => 'petugas@mail.com',
+                'username' => 'petugas',
                 'role' => 'petugas',
                 'password' => bcrypt('ptg123')
             ],
             [
                 'name' => 'mahasiswa',
                 'email' => 'mahasiswa@mail.com',
+                'username' => 'mahasiswa',
                 'role' => 'mahasiswa',
                 'password' => bcrypt('mhs123')
             ],
@@ -41,8 +44,9 @@ class DummyUsersSeeder extends Seeder
         User::factory()->create([
             'name' => 'solo',
             'email' => 'solo@mail.com',
+            'username' => 'solo',
             'role' => 'solo',
-            'password' => 'solo123',
+            'password' => bcrypt('solo123'),
         ]);
     }
 }
